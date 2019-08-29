@@ -14,6 +14,7 @@ class EventsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = .eventsNavigationTitle
     }
 }
 
@@ -41,6 +42,9 @@ extension EventsListViewController: UITableViewDataSource{
         cell.preservesSuperviewLayoutMargins = false
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
+        
+        //remove extra separator
+        self.tableView.tableFooterView = UIView()
         
         return cell
     }

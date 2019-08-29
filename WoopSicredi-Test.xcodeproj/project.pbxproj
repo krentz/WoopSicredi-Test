@@ -13,6 +13,7 @@
 		7904563C2318396F00C80B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7904563B2318396F00C80B08 /* Assets.xcassets */; };
 		7904563F2318396F00C80B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7904563D2318396F00C80B08 /* LaunchScreen.storyboard */; };
 		7904564A2318396F00C80B08 /* WoopSicredi_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456492318396F00C80B08 /* WoopSicredi_TestTests.swift */; };
+		79045658231849A500C80B08 /* String+EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79045657231849A500C80B08 /* String+EventsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		790456452318396F00C80B08 /* WoopSicredi-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WoopSicredi-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790456492318396F00C80B08 /* WoopSicredi_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopSicredi_TestTests.swift; sourceTree = "<group>"; };
 		7904564B2318396F00C80B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79045657231849A500C80B08 /* String+EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EventsList.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				790456332318396B00C80B08 /* WoopSicredi-Test */,
+				7904565A23184A3A00C80B08 /* Resources */,
 				790456482318396F00C80B08 /* WoopSicredi-TestTests */,
 				790456322318396B00C80B08 /* Products */,
 			);
@@ -78,11 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				790456342318396B00C80B08 /* AppDelegate.swift */,
-				790456362318396B00C80B08 /* EventsListViewController.swift */,
-				790456382318396B00C80B08 /* Main.storyboard */,
-				7904563B2318396F00C80B08 /* Assets.xcassets */,
-				7904563D2318396F00C80B08 /* LaunchScreen.storyboard */,
-				790456402318396F00C80B08 /* Info.plist */,
+				7904565923184A2000C80B08 /* Storyboards */,
+				790456542318496F00C80B08 /* Events List */,
 			);
 			path = "WoopSicredi-Test";
 			sourceTree = "<group>";
@@ -94,6 +94,49 @@
 				7904564B2318396F00C80B08 /* Info.plist */,
 			);
 			path = "WoopSicredi-TestTests";
+			sourceTree = "<group>";
+		};
+		790456542318496F00C80B08 /* Events List */ = {
+			isa = PBXGroup;
+			children = (
+				790456552318498900C80B08 /* Controllers */,
+				790456562318499100C80B08 /* Extensions */,
+			);
+			path = "Events List";
+			sourceTree = "<group>";
+		};
+		790456552318498900C80B08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				790456362318396B00C80B08 /* EventsListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		790456562318499100C80B08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79045657231849A500C80B08 /* String+EventsList.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7904565923184A2000C80B08 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7904563D2318396F00C80B08 /* LaunchScreen.storyboard */,
+				790456382318396B00C80B08 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7904565A23184A3A00C80B08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7904563B2318396F00C80B08 /* Assets.xcassets */,
+				790456402318396F00C80B08 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
+				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,
 				790456352318396B00C80B08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8ZX2P739G;
-				INFOPLIST_FILE = "WoopSicredi-Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8ZX2P739G;
-				INFOPLIST_FILE = "WoopSicredi-Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
