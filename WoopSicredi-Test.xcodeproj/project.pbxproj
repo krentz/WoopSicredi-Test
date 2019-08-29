@@ -16,6 +16,7 @@
 		79045658231849A500C80B08 /* String+EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79045657231849A500C80B08 /* String+EventsList.swift */; };
 		7904566223184E2500C80B08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7904566123184E2500C80B08 /* Alamofire.framework */; };
 		7904566423184E3100C80B08 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7904566123184E2500C80B08 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7904566B2318504D00C80B08 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7904566A2318504D00C80B08 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7904564B2318396F00C80B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79045657231849A500C80B08 /* String+EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EventsList.swift"; sourceTree = "<group>"; };
 		7904566123184E2500C80B08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		7904566A2318504D00C80B08 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				790456342318396B00C80B08 /* AppDelegate.swift */,
+				790456692318503C00C80B08 /* API Service */,
 				7904565923184A2000C80B08 /* Storyboards */,
 				790456542318496F00C80B08 /* Events List */,
 			);
@@ -172,6 +175,14 @@
 				7904566123184E2500C80B08 /* Alamofire.framework */,
 			);
 			path = Carthage;
+			sourceTree = "<group>";
+		};
+		790456692318503C00C80B08 /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+				7904566A2318504D00C80B08 /* Service.swift */,
+			);
+			path = "API Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
+				7904566B2318504D00C80B08 /* Service.swift in Sources */,
 				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,
 				790456352318396B00C80B08 /* AppDelegate.swift in Sources */,
 			);

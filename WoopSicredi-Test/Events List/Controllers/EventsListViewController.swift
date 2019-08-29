@@ -16,7 +16,16 @@ class EventsListViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = .eventsNavigationTitle
         
+       
+        self.getEventsList()
     }
+    
+    func getEventsList(){
+        Service.shared.getEventsList(completionHandler: { response,error  in
+            
+        })
+    }
+    
 }
 
 
