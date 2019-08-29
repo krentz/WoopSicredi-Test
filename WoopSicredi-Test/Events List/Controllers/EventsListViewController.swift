@@ -27,11 +27,12 @@ class EventsListViewController: UIViewController {
             if error != nil {
                 
             }
-            
-            self.eventList = response!
-            DispatchQueue.main.async {
-                self.tableView.showTableViewWithAnimation()
-                self.indicatorActivity.stopAnimating()
+            else{
+                self.eventList = response!
+                DispatchQueue.main.async {
+                    self.tableView.showTableViewWithAnimation()
+                    self.indicatorActivity.stopAnimating()
+                }
             }
         })
     }
