@@ -15,6 +15,7 @@ class EventsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = .eventsNavigationTitle
+        
     }
 }
 
