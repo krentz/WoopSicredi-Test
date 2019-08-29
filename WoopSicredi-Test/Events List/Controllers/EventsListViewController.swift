@@ -11,6 +11,8 @@ import UIKit
 class EventsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
+    var eventList : [EventsList] = [EventsList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +24,17 @@ class EventsListViewController: UIViewController {
     
     func getEventsList(){
         Service.shared.getEventsList(completionHandler: { response,error  in
+            if error != nil {
+                
+            }
             
+            self.eventList = response!
+            DispatchQueue.main.async {
+                self.tableView.showTableViewWithAnimation()
+                self.indicatorActivity.stopAnimating()
+            }
         })
     }
-    
 }
 
 
@@ -33,7 +42,7 @@ class EventsListViewController: UIViewController {
 
 extension EventsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("clicked row \(indexPath.row)")
+        print("clicked event : \(self.eventList[indexPath.row].title)")
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
@@ -45,7 +54,7 @@ extension EventsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = "test \(indexPath.row)"
+        cell.textLabel?.text = self.eventList[indexPath.row].title
         cell.textLabel?.textAlignment = .center
         
         //line separator
@@ -60,7 +69,7 @@ extension EventsListViewController: UITableViewDataSource{
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.eventList.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
