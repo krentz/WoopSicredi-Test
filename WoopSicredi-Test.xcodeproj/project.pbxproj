@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4E2BD2318AD0B00BB5BB2 /* Utils.swift */; };
 		790456352318396B00C80B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456342318396B00C80B08 /* AppDelegate.swift */; };
 		790456372318396B00C80B08 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456362318396B00C80B08 /* EventsListViewController.swift */; };
 		7904563A2318396B00C80B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790456382318396B00C80B08 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3CD4E2BD2318AD0B00BB5BB2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		790456312318396B00C80B08 /* WoopSicredi-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoopSicredi-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790456342318396B00C80B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790456362318396B00C80B08 /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CD4E2BF2318BA3300BB5BB2 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				3CD4E2C02318BA3C00BB5BB2 /* Utils */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		3CD4E2C02318BA3C00BB5BB2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3CD4E2BD2318AD0B00BB5BB2 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		790456282318396B00C80B08 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				790456342318396B00C80B08 /* AppDelegate.swift */,
+				3CD4E2BF2318BA3300BB5BB2 /* General */,
 				790456692318503C00C80B08 /* API Service */,
 				7904565923184A2000C80B08 /* Storyboards */,
 				790456542318496F00C80B08 /* Events List */,
@@ -332,6 +351,7 @@
 			files = (
 				790456732318679900C80B08 /* Person.swift in Sources */,
 				790456712318619700C80B08 /* EventsList.swift in Sources */,
+				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
 				7904566B2318504D00C80B08 /* Service.swift in Sources */,
 				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,

@@ -36,14 +36,14 @@ struct EventsList: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-         date = try values.decode(Int.self, forKey: .date)
-         description = try values.decode(String.self, forKey: .description)
-         image = try values.decode(String.self, forKey: .image)
-         title = try values.decode(String.self, forKey: .title)
-         id = try values.decode(String.self, forKey: .id)
-         cupons = try values.decode([Coupon].self, forKey: .cupons)
-         people = try values.decode([Person].self, forKey: .people)
-         price = try values.decode(Double.self, forKey: .price)
+        date = try values.decode(Int.self, forKey: .date)
+        description = try values.decode(String.self, forKey: .description)
+        image = try values.decode(String.self, forKey: .image)
+        title = try values.decode(String.self, forKey: .title)
+        id = try values.decode(String.self, forKey: .id)
+        cupons = try values.decode([Coupon].self, forKey: .cupons)
+        people = try values.decode([Person].self, forKey: .people)
+        price = try values.decode(Double.self, forKey: .price)
         
         if let stringProperty = try? values.decode(String.self, forKey: .latitude) {
             latitude = stringProperty
@@ -56,8 +56,5 @@ struct EventsList: Decodable {
         } else {
             longitude = try values.decode(Double.self, forKey: .longitude)
         }
-        
-        
     }
-    
 }

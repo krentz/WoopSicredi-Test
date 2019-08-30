@@ -9,8 +9,7 @@
 import UIKit
 
 extension UITableView{
-
-    func showTableViewWithAnimation(){
+  func showTableViewWithAnimation(){
         UIView.transition(with:  self,
                           duration: 0.5,
                           options: .transitionCrossDissolve,
