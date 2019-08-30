@@ -13,7 +13,6 @@ class PopupAlertViewController: UIViewController{
     
     @IBOutlet weak var popupView: UIView!{
         didSet{
-         //   popupView.transform = CGAffineTransform(translationX: 0.0, y: UIScreen.main.bounds.height)
             popupView.layer.cornerRadius = 5
             popupView.alpha = 0
         }

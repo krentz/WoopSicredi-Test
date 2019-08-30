@@ -17,7 +17,7 @@ class EventsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = .eventsNavigationTitle
-        
+        self.tableView.register(UINib(nibName: "EventsTableViewCell", bundle: nil), forCellReuseIdentifier: "eventsCellID")
        
         self.getEventsList()
     }
@@ -46,26 +46,18 @@ extension EventsListViewController: UITableViewDelegate {
         print("clicked event : \(self.eventList[indexPath.row].title)")
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 120
     }
 }
 
 extension EventsListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = self.eventList[indexPath.row].title
-        cell.textLabel?.textAlignment = .center
+         let cell = self.tableView.dequeueReusableCell(withIdentifier: "eventsCellID", for: indexPath) as! EventsTableViewCell
         
-        //line separator
-        cell.preservesSuperviewLayoutMargins = false
-        cell.separatorInset = UIEdgeInsets.zero
-        cell.layoutMargins = UIEdgeInsets.zero
-        
-        //remove extra separator
-        self.tableView.tableFooterView = UIView()
-        
+        cell.titleLabel.text = self.eventList[indexPath.row].title
+    
         return cell
     }
    

@@ -25,6 +25,8 @@
 		7904567D2319516100C80B08 /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7904567C2319516100C80B08 /* Popups.storyboard */; };
 		790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7904567F2319520B00C80B08 /* PopupAlertViewController.swift */; };
 		790456832319548600C80B08 /* UIViewController+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456822319548600C80B08 /* UIViewController+General.swift */; };
+		790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456852319656B00C80B08 /* EventsTableViewCell.swift */; };
+		790456882319656B00C80B08 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790456862319656B00C80B08 /* EventsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		7904567C2319516100C80B08 /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
 		7904567F2319520B00C80B08 /* PopupAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAlertViewController.swift; sourceTree = "<group>"; };
 		790456822319548600C80B08 /* UIViewController+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+General.swift"; sourceTree = "<group>"; };
+		790456852319656B00C80B08 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		790456862319656B00C80B08 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		790456542318496F00C80B08 /* Events List */ = {
 			isa = PBXGroup;
 			children = (
+				790456842319651E00C80B08 /* Custom Cells */,
 				790456552318498900C80B08 /* Controllers */,
 				7904566F2318604200C80B08 /* Models */,
 				790456562318499100C80B08 /* Extensions */,
@@ -249,6 +254,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		790456842319651E00C80B08 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				790456852319656B00C80B08 /* EventsTableViewCell.swift */,
+				790456862319656B00C80B08 /* EventsTableViewCell.xib */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790456882319656B00C80B08 /* EventsTableViewCell.xib in Resources */,
 				7904563F2318396F00C80B08 /* LaunchScreen.storyboard in Resources */,
 				7904563C2318396F00C80B08 /* Assets.xcassets in Resources */,
 				7904563A2318396B00C80B08 /* Main.storyboard in Resources */,
@@ -379,6 +394,7 @@
 				790456712318619700C80B08 /* EventsList.swift in Sources */,
 				790456832319548600C80B08 /* UIViewController+General.swift in Sources */,
 				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,
+				790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
 				790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */,
 				7904566B2318504D00C80B08 /* Service.swift in Sources */,
