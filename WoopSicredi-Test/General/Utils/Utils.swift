@@ -16,7 +16,7 @@ class Utils {
         let date = Date(timeIntervalSince1970: TimeInterval(timeInterval/1000))
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd 'de' MMM 'de' yyyy, HH:mm:ss"
+        dateFormatter.dateFormat = "dd 'de' MMM 'de' yyyy, HH:mm"
         dateFormatter.locale = Locale(identifier: "pt_BR")
         
         return dateFormatter.string(from: date)

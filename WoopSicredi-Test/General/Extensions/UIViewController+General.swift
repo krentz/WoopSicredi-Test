@@ -12,12 +12,13 @@ extension UIViewController {
     
     func showAlertPopup(title: String,
                    message: String,
-                   in vc: UIViewController) {
-       
+                   closeButtonCompletion: (() -> ())? = nil ){
+                   
         guard let popvc = UIStoryboard(name: "Popups", bundle: nil).instantiateViewController(withIdentifier: "alertPopupID") as? PopupAlertViewController else { return }
         
         popvc.alertTitle = title
         popvc.alertMessage = message
+        popvc.completionAction = closeButtonCompletion
         
         self.addChild(popvc)
         popvc.view.frame = UIScreen.main.bounds

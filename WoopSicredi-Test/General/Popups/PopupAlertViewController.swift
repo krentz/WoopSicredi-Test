@@ -32,17 +32,25 @@ class PopupAlertViewController: UIViewController{
             alertMessageLabel.text = self.alertMessage
         }
     }
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!{
+        didSet{
+            closeButton.layer.borderWidth = 1
+            closeButton.layer.borderColor = UIColor.gray.cgColor
+            closeButton.layer.cornerRadius = 5
+            closeButton.setTitle("Tentar novaumente", for: .normal)
+        }
+    }
     
     var alertTitle = ""
     var alertMessage = ""
+    var completionAction: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
    
-        self.navigationController?.navigationBar.alpha = 0.1
+        self.navigationController?.navigationBar.alpha = 0.7
         self.navigationController?.navigationBar.backgroundColor = UIColor.white
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .transitionCrossDissolve, animations: {
@@ -53,6 +61,8 @@ class PopupAlertViewController: UIViewController{
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .transitionCrossDissolve, animations: {
             self.popupView.alpha = 0
         }) { success in
+            
+            self.completionAction?()
             self.navigationController?.navigationBar.backgroundColor = UIColor.white
             self.navigationController?.navigationBar.alpha = 1
             

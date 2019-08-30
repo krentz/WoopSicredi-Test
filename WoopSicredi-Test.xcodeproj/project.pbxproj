@@ -31,6 +31,7 @@
 		7904568D231988D300C80B08 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7904568B2319881B00C80B08 /* Kingfisher.framework */; };
 		7904568E231988D300C80B08 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7904568B2319881B00C80B08 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		790456922319916100C80B08 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456912319916100C80B08 /* EventDetailViewController.swift */; };
+		790456982319A2B800C80B08 /* Double+PriceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456972319A2B800C80B08 /* Double+PriceMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		79045689231973B400C80B08 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		7904568B2319881B00C80B08 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
 		790456912319916100C80B08 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		790456972319A2B800C80B08 /* Double+PriceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+PriceMask.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,12 +150,12 @@
 		790456332318396B00C80B08 /* WoopSicredi-Test */ = {
 			isa = PBXGroup;
 			children = (
-				7904568F2319913700C80B08 /* Event Detail */,
 				790456342318396B00C80B08 /* AppDelegate.swift */,
 				3CD4E2BF2318BA3300BB5BB2 /* General */,
 				790456692318503C00C80B08 /* API Service */,
 				7904565923184A2000C80B08 /* Storyboards */,
 				790456542318496F00C80B08 /* Events List */,
+				7904568F2319913700C80B08 /* Event Detail */,
 			);
 			path = "WoopSicredi-Test";
 			sourceTree = "<group>";
@@ -170,8 +172,8 @@
 		790456542318496F00C80B08 /* Events List */ = {
 			isa = PBXGroup;
 			children = (
-				790456842319651E00C80B08 /* Custom Cells */,
 				790456552318498900C80B08 /* Controllers */,
+				790456842319651E00C80B08 /* Custom Cells */,
 				7904566F2318604200C80B08 /* Models */,
 				790456562318499100C80B08 /* Extensions */,
 			);
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				79045657231849A500C80B08 /* String+EventsList.swift */,
+				790456972319A2B800C80B08 /* Double+PriceMask.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				790456832319548600C80B08 /* UIViewController+General.swift in Sources */,
 				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,
 				7904568A231973B400C80B08 /* UIImageView+LoadImage.swift in Sources */,
+				790456982319A2B800C80B08 /* Double+PriceMask.swift in Sources */,
 				790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
 				790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */,

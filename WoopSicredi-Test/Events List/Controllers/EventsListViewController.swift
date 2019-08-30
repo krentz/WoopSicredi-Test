@@ -25,8 +25,10 @@ class EventsListViewController: UIViewController {
     
     func getEventsList(){
         Service.shared.getEventsList(completionHandler: { response,error  in
-            if let errorLocalizedDescription = error?.localizedDescription {
-                self.showAlertPopup(title: "Ops!" , message: errorLocalizedDescription, in: self)
+            if error != nil {
+                self.showAlertPopup(title: "Ops!" , message: "Ocorreu um erro ao tentar buscar os eventos. Gostaria de tentar novamente?", closeButtonCompletion: {
+                    self.getEventsList()
+                })
             }
             else{
                 self.eventList = response!
@@ -44,6 +46,7 @@ class EventsListViewController: UIViewController {
             vc.eventList = sender as? EventsList
         }
     }
+    
 }
 
 
@@ -51,8 +54,7 @@ class EventsListViewController: UIViewController {
 
 extension EventsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("clicked event : \(self.eventList[indexPath.row].title)")
-         self.performSegue(withIdentifier: "showDetailEventView", sender: self.eventList[indexPath.row])
+        self.performSegue(withIdentifier: "showDetailEventView", sender: self.eventList[indexPath.row])
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
@@ -67,6 +69,8 @@ extension EventsListViewController: UITableViewDataSource{
         
         cell.titleLabel.text = self.eventList[indexPath.row].title
         cell.eventImage?.loadImage(url: self.eventList[indexPath.row].image)
+        cell.dateLabel?.text = Utils.shared.getFormattedDate(timeInterval: self.eventList[indexPath.row].date)
+        cell.priceLabel?.text = self.eventList[indexPath.row].price.getPriceWithMask()
         
         return cell
     }
