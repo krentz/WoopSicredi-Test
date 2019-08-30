@@ -24,8 +24,8 @@ class EventsListViewController: UIViewController {
     
     func getEventsList(){
         Service.shared.getEventsList(completionHandler: { response,error  in
-            if error != nil {
-                
+            if let errorLocalizedDescription = error?.localizedDescription {
+                self.showAlertPopup(title: "Ops!" , message: errorLocalizedDescription, in: self)
             }
             else{
                 self.eventList = response!

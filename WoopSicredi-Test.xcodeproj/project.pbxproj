@@ -22,6 +22,9 @@
 		790456732318679900C80B08 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456722318679900C80B08 /* Person.swift */; };
 		79045675231867DD00C80B08 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79045674231867DC00C80B08 /* Coupon.swift */; };
 		790456772318711500C80B08 /* UITableView+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456762318711500C80B08 /* UITableView+Animate.swift */; };
+		7904567D2319516100C80B08 /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7904567C2319516100C80B08 /* Popups.storyboard */; };
+		790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7904567F2319520B00C80B08 /* PopupAlertViewController.swift */; };
+		790456832319548600C80B08 /* UIViewController+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456822319548600C80B08 /* UIViewController+General.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		790456722318679900C80B08 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		79045674231867DC00C80B08 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		790456762318711500C80B08 /* UITableView+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Animate.swift"; sourceTree = "<group>"; };
+		7904567C2319516100C80B08 /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
+		7904567F2319520B00C80B08 /* PopupAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAlertViewController.swift; sourceTree = "<group>"; };
+		790456822319548600C80B08 /* UIViewController+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+General.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,8 @@
 		3CD4E2BF2318BA3300BB5BB2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				790456812319546100C80B08 /* Extensions */,
+				7904567E231951AB00C80B08 /* Popups */,
 				3CD4E2C02318BA3C00BB5BB2 /* Utils */,
 			);
 			path = General;
@@ -167,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				79045657231849A500C80B08 /* String+EventsList.swift */,
-				790456762318711500C80B08 /* UITableView+Animate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 			children = (
 				7904563D2318396F00C80B08 /* LaunchScreen.storyboard */,
 				790456382318396B00C80B08 /* Main.storyboard */,
+				7904567C2319516100C80B08 /* Popups.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -222,6 +230,23 @@
 				79045674231867DC00C80B08 /* Coupon.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7904567E231951AB00C80B08 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				7904567F2319520B00C80B08 /* PopupAlertViewController.swift */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		790456812319546100C80B08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				790456762318711500C80B08 /* UITableView+Animate.swift */,
+				790456822319548600C80B08 /* UIViewController+General.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +335,7 @@
 				7904563F2318396F00C80B08 /* LaunchScreen.storyboard in Resources */,
 				7904563C2318396F00C80B08 /* Assets.xcassets in Resources */,
 				7904563A2318396B00C80B08 /* Main.storyboard in Resources */,
+				7904567D2319516100C80B08 /* Popups.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +377,10 @@
 			files = (
 				790456732318679900C80B08 /* Person.swift in Sources */,
 				790456712318619700C80B08 /* EventsList.swift in Sources */,
+				790456832319548600C80B08 /* UIViewController+General.swift in Sources */,
 				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
+				790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */,
 				7904566B2318504D00C80B08 /* Service.swift in Sources */,
 				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,
 				790456352318396B00C80B08 /* AppDelegate.swift in Sources */,
