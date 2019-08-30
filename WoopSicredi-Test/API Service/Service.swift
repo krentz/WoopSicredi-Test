@@ -14,7 +14,7 @@ class Service {
     static let shared = Service()
 
     func getEventsList(completionHandler: @escaping ([EventsList]?,Error?) -> Void) {
-        Alamofire.request("https://5b840ba5db24a100142dcd8c.mockapi.io/api/events/").responseJSON { response in
+        Alamofire.request("http://5b840ba5db24a100142dcd8c.mockapi.io/api/events/").responseJSON { response in
             switch response.result {
             case .success:
                 if let data = response.data {

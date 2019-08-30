@@ -27,6 +27,10 @@
 		790456832319548600C80B08 /* UIViewController+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456822319548600C80B08 /* UIViewController+General.swift */; };
 		790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456852319656B00C80B08 /* EventsTableViewCell.swift */; };
 		790456882319656B00C80B08 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790456862319656B00C80B08 /* EventsTableViewCell.xib */; };
+		7904568A231973B400C80B08 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79045689231973B400C80B08 /* UIImageView+LoadImage.swift */; };
+		7904568D231988D300C80B08 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7904568B2319881B00C80B08 /* Kingfisher.framework */; };
+		7904568E231988D300C80B08 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7904568B2319881B00C80B08 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		790456922319916100C80B08 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456912319916100C80B08 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7904568E231988D300C80B08 /* Kingfisher.framework in Embed Frameworks */,
 				7904566423184E3100C80B08 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +82,9 @@
 		790456822319548600C80B08 /* UIViewController+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+General.swift"; sourceTree = "<group>"; };
 		790456852319656B00C80B08 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		790456862319656B00C80B08 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		79045689231973B400C80B08 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
+		7904568B2319881B00C80B08 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
+		790456912319916100C80B08 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7904568D231988D300C80B08 /* Kingfisher.framework in Frameworks */,
 				7904566223184E2500C80B08 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +148,7 @@
 		790456332318396B00C80B08 /* WoopSicredi-Test */ = {
 			isa = PBXGroup;
 			children = (
+				7904568F2319913700C80B08 /* Event Detail */,
 				790456342318396B00C80B08 /* AppDelegate.swift */,
 				3CD4E2BF2318BA3300BB5BB2 /* General */,
 				790456692318503C00C80B08 /* API Service */,
@@ -214,6 +224,7 @@
 		7904565F23184CF600C80B08 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				7904568B2319881B00C80B08 /* Kingfisher.framework */,
 				7904566123184E2500C80B08 /* Alamofire.framework */,
 			);
 			path = Carthage;
@@ -250,6 +261,7 @@
 			children = (
 				790456762318711500C80B08 /* UITableView+Animate.swift */,
 				790456822319548600C80B08 /* UIViewController+General.swift */,
+				79045689231973B400C80B08 /* UIImageView+LoadImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +273,22 @@
 				790456862319656B00C80B08 /* EventsTableViewCell.xib */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		7904568F2319913700C80B08 /* Event Detail */ = {
+			isa = PBXGroup;
+			children = (
+				790456902319914000C80B08 /* Controllers */,
+			);
+			path = "Event Detail";
+			sourceTree = "<group>";
+		};
+		790456902319914000C80B08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				790456912319916100C80B08 /* EventDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +401,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -381,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -394,6 +423,7 @@
 				790456712318619700C80B08 /* EventsList.swift in Sources */,
 				790456832319548600C80B08 /* UIViewController+General.swift in Sources */,
 				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,
+				7904568A231973B400C80B08 /* UIImageView+LoadImage.swift in Sources */,
 				790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
 				790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */,
@@ -401,6 +431,7 @@
 				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,
 				790456352318396B00C80B08 /* AppDelegate.swift in Sources */,
 				790456772318711500C80B08 /* UITableView+Animate.swift in Sources */,
+				790456922319916100C80B08 /* EventDetailViewController.swift in Sources */,
 				79045675231867DD00C80B08 /* Coupon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EventsListViewController: UIViewController {
 
@@ -36,6 +37,13 @@ class EventsListViewController: UIViewController {
             }
         })
     }
+    //segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showDetailEventView") {
+            let vc = segue.destination as! EventDetailViewController
+            vc.eventList = sender as? EventsList
+        }
+    }
 }
 
 
@@ -44,6 +52,7 @@ class EventsListViewController: UIViewController {
 extension EventsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("clicked event : \(self.eventList[indexPath.row].title)")
+         self.performSegue(withIdentifier: "showDetailEventView", sender: self.eventList[indexPath.row])
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
@@ -57,7 +66,8 @@ extension EventsListViewController: UITableViewDataSource{
          let cell = self.tableView.dequeueReusableCell(withIdentifier: "eventsCellID", for: indexPath) as! EventsTableViewCell
         
         cell.titleLabel.text = self.eventList[indexPath.row].title
-    
+        cell.eventImage?.loadImage(url: self.eventList[indexPath.row].image)
+        
         return cell
     }
    

@@ -12,6 +12,11 @@ class EventsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
    
+    @IBOutlet weak var eventImage: UIImageView!{
+        didSet{
+            eventImage.layer.cornerRadius = 5
+        }
+    }
     @IBOutlet weak var roundView: UIView!{
         didSet{
             roundView.layer.cornerRadius = 5

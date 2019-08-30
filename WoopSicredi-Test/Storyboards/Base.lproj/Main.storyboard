@@ -55,11 +55,27 @@
                     <connections>
                         <outlet property="indicatorActivity" destination="wCf-2L-YtB" id="oFM-8P-35p"/>
                         <outlet property="tableView" destination="xZY-CT-CQG" id="BVf-Mf-G2m"/>
+                        <segue destination="iHv-kn-0ny" kind="show" identifier="showDetailEventView" id="N2e-aH-CtR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="126.38680659670166"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="EXs-I9-y8f">
+            <objects>
+                <viewController id="iHv-kn-0ny" customClass="EventDetailViewController" customModule="WoopSicredi_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o1G-Bq-SXX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7pj-Sm-41L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNm-2o-P7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iZL-zt-wDP">
