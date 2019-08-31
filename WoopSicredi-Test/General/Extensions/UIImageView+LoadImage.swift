@@ -18,12 +18,7 @@ extension UIImageView {
             placeholder: UIImage(named: "placeholder"),
             options: [.transition(.fade(0.2))] ) {
             result in
-            switch result {
-            case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-            case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
-            }
+          
         }
     }
 }

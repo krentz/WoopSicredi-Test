@@ -10,13 +10,23 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
 
-    var eventList : EventsList!
+    var event : Event!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
         self.setNavigation()
+        self.layoutSubviews()
+      
     }
+    
+    
+   
     
     func setNavigation(){
         self.navigationItem.title = "Evento"
@@ -24,5 +34,10 @@ class EventDetailViewController: UIViewController {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
     }
-  
+    func layoutSubviews() {
+        self.titleLabel.text = event.title
+        self.descriptionLabel.text = event.description
+        self.priceLabel.text = event.price.getPriceWithMask()
+        self.dateLabel.text = Utils.shared.getFormattedDate(timeInterval: event.date)
+    }
 }

@@ -13,7 +13,7 @@ class EventsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
-    var eventList : [EventsList] = [EventsList]()
+    var eventList : [Event] = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class EventsListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showDetailEventView") {
             let vc = segue.destination as! EventDetailViewController
-            vc.eventList = sender as? EventsList
+            vc.event = sender as? Event
         }
     }
     

@@ -13,14 +13,14 @@ class Service {
     
     static let shared = Service()
 
-    func getEventsList(completionHandler: @escaping ([EventsList]?,Error?) -> Void) {
+    func getEventsList(completionHandler: @escaping ([Event]?,Error?) -> Void) {
         Alamofire.request("http://5b840ba5db24a100142dcd8c.mockapi.io/api/events/").responseJSON { response in
             switch response.result {
             case .success:
                 if let data = response.data {
                     do {
                         let jsonDecoder = JSONDecoder()
-                        let json = try jsonDecoder.decode([EventsList]?.self, from: data)
+                        let json = try jsonDecoder.decode([Event]?.self, from: data)
                         completionHandler(json,nil)
                     } catch let error{
                         completionHandler(nil, error)
