@@ -18,7 +18,7 @@ class EventsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = .eventsNavigationTitle
-        self.tableView.register(UINib(nibName: "EventsTableViewCell", bundle: nil), forCellReuseIdentifier: "eventsCellID")
+        self.tableView.register(EventsTableViewCell.nib, forCellReuseIdentifier: EventsTableViewCell.identifier)
        
         self.getEventsList()
     }
@@ -43,7 +43,7 @@ class EventsListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showDetailEventView") {
             let vc = segue.destination as! EventDetailViewController
-            vc.event = sender as? Event
+            vc.viewModel = sender as? EventDetailViewModel
         }
     }
     
@@ -54,7 +54,7 @@ class EventsListViewController: UIViewController {
 
 extension EventsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showDetailEventView", sender: self.eventList[indexPath.row])
+        self.performSegue(withIdentifier: "showDetailEventView", sender: EventDetailViewModel(event: self.eventList[indexPath.row]))
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
@@ -65,7 +65,7 @@ extension EventsListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-         let cell = self.tableView.dequeueReusableCell(withIdentifier: "eventsCellID", for: indexPath) as! EventsTableViewCell
+         let cell = self.tableView.dequeueReusableCell(withIdentifier: EventsTableViewCell.identifier, for: indexPath) as! EventsTableViewCell
         
         cell.titleLabel.text = self.eventList[indexPath.row].title
         cell.eventImage?.loadImage(url: self.eventList[indexPath.row].image)

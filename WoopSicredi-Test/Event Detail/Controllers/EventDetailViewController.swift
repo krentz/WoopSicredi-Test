@@ -10,23 +10,31 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
 
-    var event : Event!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    var viewModel : EventDetailViewModel! // (event: self.event)
+
+    @IBOutlet weak var tableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         self.setNavigation()
-        self.layoutSubviews()
-      
+        
+        tableView?.dataSource = viewModel
+        
+        tableView?.estimatedRowHeight = 100
+        tableView?.rowHeight = UITableView.automaticDimension
+        tableView?.preservesSuperviewLayoutMargins = false
+        tableView?.separatorInset = UIEdgeInsets.zero
+        tableView?.layoutMargins = UIEdgeInsets.zero
+        
+        tableView?.register(DescriptionTableViewCell.nib, forCellReuseIdentifier: DescriptionTableViewCell.identifier)
+        tableView?.register(PriceTableViewCell.nib, forCellReuseIdentifier: PriceTableViewCell.identifier)
+        tableView?.register(DateTableViewCell.nib, forCellReuseIdentifier: DateTableViewCell.identifier)
+        tableView?.register(LocationTableViewCell.nib, forCellReuseIdentifier: LocationTableViewCell.identifier)
+        tableView?.register(CheckinTableViewCell.nib, forCellReuseIdentifier: CheckinTableViewCell.identifier)
+        tableView?.register(HeaderTableViewCell.nib, forCellReuseIdentifier: HeaderTableViewCell.identifier)
+        
     }
-    
-    
-   
     
     func setNavigation(){
         self.navigationItem.title = "Evento"
@@ -34,10 +42,5 @@ class EventDetailViewController: UIViewController {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
     }
-    func layoutSubviews() {
-        self.titleLabel.text = event.title
-        self.descriptionLabel.text = event.description
-        self.priceLabel.text = event.price.getPriceWithMask()
-        self.dateLabel.text = Utils.shared.getFormattedDate(timeInterval: event.date)
-    }
+
 }

@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4E2BD2318AD0B00BB5BB2 /* Utils.swift */; };
+		3CF95D21231B216800DFE48D /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D20231B216800DFE48D /* EventDetailViewModel.swift */; };
+		3CF95D24231B21BC00DFE48D /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D22231B21BC00DFE48D /* DescriptionTableViewCell.swift */; };
+		3CF95D25231B21BC00DFE48D /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D23231B21BC00DFE48D /* DescriptionTableViewCell.xib */; };
+		3CF95D28231B393300DFE48D /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D26231B393300DFE48D /* PriceTableViewCell.swift */; };
+		3CF95D29231B393300DFE48D /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D27231B393300DFE48D /* PriceTableViewCell.xib */; };
+		3CF95D2C231B3E6E00DFE48D /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D2A231B3E6E00DFE48D /* DateTableViewCell.swift */; };
+		3CF95D2D231B3E6E00DFE48D /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D2B231B3E6E00DFE48D /* DateTableViewCell.xib */; };
+		3CF95D30231B40EB00DFE48D /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D2E231B40EB00DFE48D /* LocationTableViewCell.swift */; };
+		3CF95D31231B40EB00DFE48D /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D2F231B40EB00DFE48D /* LocationTableViewCell.xib */; };
+		3CF95D34231B466100DFE48D /* CheckinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D32231B466100DFE48D /* CheckinTableViewCell.swift */; };
+		3CF95D35231B466100DFE48D /* CheckinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D33231B466100DFE48D /* CheckinTableViewCell.xib */; };
+		3CF95D38231B48EC00DFE48D /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D36231B48EC00DFE48D /* HeaderTableViewCell.swift */; };
+		3CF95D39231B48EC00DFE48D /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D37231B48EC00DFE48D /* HeaderTableViewCell.xib */; };
 		790456352318396B00C80B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456342318396B00C80B08 /* AppDelegate.swift */; };
 		790456372318396B00C80B08 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456362318396B00C80B08 /* EventsListViewController.swift */; };
 		7904563A2318396B00C80B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790456382318396B00C80B08 /* Main.storyboard */; };
@@ -61,6 +74,19 @@
 
 /* Begin PBXFileReference section */
 		3CD4E2BD2318AD0B00BB5BB2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3CF95D20231B216800DFE48D /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		3CF95D22231B21BC00DFE48D /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		3CF95D23231B21BC00DFE48D /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		3CF95D26231B393300DFE48D /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		3CF95D27231B393300DFE48D /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
+		3CF95D2A231B3E6E00DFE48D /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		3CF95D2B231B3E6E00DFE48D /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
+		3CF95D2E231B40EB00DFE48D /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		3CF95D2F231B40EB00DFE48D /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		3CF95D32231B466100DFE48D /* CheckinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinTableViewCell.swift; sourceTree = "<group>"; };
+		3CF95D33231B466100DFE48D /* CheckinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinTableViewCell.xib; sourceTree = "<group>"; };
+		3CF95D36231B48EC00DFE48D /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3CF95D37231B48EC00DFE48D /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		790456312318396B00C80B08 /* WoopSicredi-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoopSicredi-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790456342318396B00C80B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790456362318396B00C80B08 /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +151,33 @@
 				3CD4E2BD2318AD0B00BB5BB2 /* Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3CF95D1E231B211D00DFE48D /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CF95D22231B21BC00DFE48D /* DescriptionTableViewCell.swift */,
+				3CF95D23231B21BC00DFE48D /* DescriptionTableViewCell.xib */,
+				3CF95D26231B393300DFE48D /* PriceTableViewCell.swift */,
+				3CF95D27231B393300DFE48D /* PriceTableViewCell.xib */,
+				3CF95D2A231B3E6E00DFE48D /* DateTableViewCell.swift */,
+				3CF95D2B231B3E6E00DFE48D /* DateTableViewCell.xib */,
+				3CF95D2E231B40EB00DFE48D /* LocationTableViewCell.swift */,
+				3CF95D2F231B40EB00DFE48D /* LocationTableViewCell.xib */,
+				3CF95D32231B466100DFE48D /* CheckinTableViewCell.swift */,
+				3CF95D33231B466100DFE48D /* CheckinTableViewCell.xib */,
+				3CF95D36231B48EC00DFE48D /* HeaderTableViewCell.swift */,
+				3CF95D37231B48EC00DFE48D /* HeaderTableViewCell.xib */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		3CF95D1F231B213100DFE48D /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CF95D20231B216800DFE48D /* EventDetailViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		790456282318396B00C80B08 = {
@@ -282,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				790456902319914000C80B08 /* Controllers */,
+				3CF95D1F231B213100DFE48D /* View Model */,
+				3CF95D1E231B211D00DFE48D /* Custom Cells */,
 			);
 			path = "Event Detail";
 			sourceTree = "<group>";
@@ -379,9 +434,15 @@
 			files = (
 				790456882319656B00C80B08 /* EventsTableViewCell.xib in Resources */,
 				7904563F2318396F00C80B08 /* LaunchScreen.storyboard in Resources */,
+				3CF95D31231B40EB00DFE48D /* LocationTableViewCell.xib in Resources */,
+				3CF95D25231B21BC00DFE48D /* DescriptionTableViewCell.xib in Resources */,
+				3CF95D29231B393300DFE48D /* PriceTableViewCell.xib in Resources */,
 				7904563C2318396F00C80B08 /* Assets.xcassets in Resources */,
+				3CF95D39231B48EC00DFE48D /* HeaderTableViewCell.xib in Resources */,
 				7904563A2318396B00C80B08 /* Main.storyboard in Resources */,
+				3CF95D35231B466100DFE48D /* CheckinTableViewCell.xib in Resources */,
 				7904567D2319516100C80B08 /* Popups.storyboard in Resources */,
+				3CF95D2D231B3E6E00DFE48D /* DateTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,15 +484,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				790456732318679900C80B08 /* Person.swift in Sources */,
+				3CF95D34231B466100DFE48D /* CheckinTableViewCell.swift in Sources */,
 				790456712318619700C80B08 /* Event.swift in Sources */,
+				3CF95D24231B21BC00DFE48D /* DescriptionTableViewCell.swift in Sources */,
 				790456832319548600C80B08 /* UIViewController+General.swift in Sources */,
 				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,
 				7904568A231973B400C80B08 /* UIImageView+LoadImage.swift in Sources */,
+				3CF95D30231B40EB00DFE48D /* LocationTableViewCell.swift in Sources */,
 				790456982319A2B800C80B08 /* Double+PriceMask.swift in Sources */,
+				3CF95D21231B216800DFE48D /* EventDetailViewModel.swift in Sources */,
+				3CF95D2C231B3E6E00DFE48D /* DateTableViewCell.swift in Sources */,
 				790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
 				790456802319520B00C80B08 /* PopupAlertViewController.swift in Sources */,
+				3CF95D28231B393300DFE48D /* PriceTableViewCell.swift in Sources */,
 				7904566B2318504D00C80B08 /* Service.swift in Sources */,
+				3CF95D38231B48EC00DFE48D /* HeaderTableViewCell.swift in Sources */,
 				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,
 				790456352318396B00C80B08 /* AppDelegate.swift in Sources */,
 				790456772318711500C80B08 /* UITableView+Animate.swift in Sources */,

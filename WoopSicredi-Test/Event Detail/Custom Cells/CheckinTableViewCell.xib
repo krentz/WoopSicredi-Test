@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="CheckinTableViewCell" customModule="WoopSicredi_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-mT-LDn">
+                        <rect key="frame" x="81" y="7" width="158" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="158" id="3f6-LP-l5V"/>
+                            <constraint firstAttribute="height" constant="30" id="Pz2-qG-yHA"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Checkin"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1OL-mT-LDn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8OX-MD-A2g"/>
+                    <constraint firstItem="1OL-mT-LDn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eGQ-vi-lbW"/>
+                    <constraint firstItem="1OL-mT-LDn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oPJ-Rw-L64"/>
+                    <constraint firstItem="1OL-mT-LDn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="rEk-Zd-id1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkinButton" destination="1OL-mT-LDn" id="GZS-V3-HmY"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="35.491071428571423"/>
+        </tableViewCell>
+    </objects>
+</document>
