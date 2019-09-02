@@ -21,7 +21,6 @@ class LocationTableViewCell: UITableViewCell {
                 return
             }
             
-            
             if let latDouble = item.latitude as? Double, let lonDouble = item.longitude as? Double {
                 self.latitude = latDouble
                 self.longitude = lonDouble

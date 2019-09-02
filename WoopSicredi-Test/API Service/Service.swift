@@ -32,12 +32,13 @@ class Service {
         }
     }
     
-    func checkin(name: String, email: String, completionHandler: @escaping (Bool?,Error?) -> Void) {
+    func checkin(name: String, email: String,eventID: String, completionHandler: @escaping (Bool?,Error?) -> Void) {
         
-        let params = ["name" : name,
+        let params = ["eventId" : eventID,
+                      "name" : name,
                       "email" : email]
         
-        Alamofire.request("http://5b840ba5db24a100142dcd8c.mockapi.io/api/checkin", method: .post, parameters: params).responseJSON { response in
+        Alamofire.request("https://5b840ba5db24a100142dcd8c.mockapi.io/api/checkin", method: .post, parameters: params).responseJSON { response in
             switch response.result {
             case .success:
                 completionHandler(true, nil)

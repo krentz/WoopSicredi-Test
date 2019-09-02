@@ -44,7 +44,7 @@ class EventDetailViewController: UIViewController {
     @objc func checkinAction(){
         self.showChekinPopup(actionButtonCompletion: { name, email in
             if name != "", email != ""{
-                Service.shared.checkin(name: name, email: email, completionHandler: { success,error  in
+                Service.shared.checkin(name: name, email: email, eventID: self.event.id, completionHandler: { success,error  in
                     if success == true {
                         self.showSampleNativeAlert(title: "Parabéns!", message: "Checkin feito com sucesso!.")
                     }
