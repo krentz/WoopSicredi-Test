@@ -11,5 +11,4 @@ import Foundation
 extension String{
     static let eventsListServiceError = "Ocorreu um erro ao tentar buscar os eventos. Gostaria de tentar novamente?"
     static let checkinServiceError = "Ocorreu um problema com o serviço, por favor tente novamente!"
-    
 }

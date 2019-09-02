@@ -51,6 +51,7 @@
 		790A7B4C231D5C3200F8D67A /* CLLocation+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B4B231D5C3200F8D67A /* CLLocation+Address.swift */; };
 		790A7B4E231D5D9200F8D67A /* String+Popups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B4D231D5D9200F8D67A /* String+Popups.swift */; };
 		790A7B50231D5DD500F8D67A /* String+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B4F231D5DD500F8D67A /* String+Errors.swift */; };
+		790A7B52231D762000F8D67A /* String+Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B51231D762000F8D67A /* String+Urls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		790A7B4B231D5C3200F8D67A /* CLLocation+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Address.swift"; sourceTree = "<group>"; };
 		790A7B4D231D5D9200F8D67A /* String+Popups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Popups.swift"; sourceTree = "<group>"; };
 		790A7B4F231D5DD500F8D67A /* String+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Errors.swift"; sourceTree = "<group>"; };
+		790A7B51231D762000F8D67A /* String+Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Urls.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 				790A7B4B231D5C3200F8D67A /* CLLocation+Address.swift */,
 				790A7B4D231D5D9200F8D67A /* String+Popups.swift */,
 				790A7B4F231D5DD500F8D67A /* String+Errors.swift */,
+				790A7B51231D762000F8D67A /* String+Urls.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				790456732318679900C80B08 /* Person.swift in Sources */,
 				790A7B4A231D554500F8D67A /* String+EventDetail.swift in Sources */,
 				3CF95D34231B466100DFE48D /* CheckinTableViewCell.swift in Sources */,
+				790A7B52231D762000F8D67A /* String+Urls.swift in Sources */,
 				790456712318619700C80B08 /* Event.swift in Sources */,
 				790A7B50231D5DD500F8D67A /* String+Errors.swift in Sources */,
 				3CF95D24231B21BC00DFE48D /* DescriptionTableViewCell.swift in Sources */,
