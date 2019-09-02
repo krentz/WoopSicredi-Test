@@ -13,14 +13,13 @@ class EventsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
-    var eventList : [Event] = [Event]()
+    var eventList = [Event]()
     var viewModel = EventListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = .eventsNavigationTitle
-        self.tableView.register(EventsTableViewCell.nib, forCellReuseIdentifier: EventsTableViewCell.identifier)
-       
+        
         self.getEventsList()
         
         tableView?.delegate = viewModel
@@ -29,6 +28,7 @@ class EventsListViewController: UIViewController {
         tableView?.preservesSuperviewLayoutMargins = false
         tableView?.separatorInset = UIEdgeInsets.zero
         tableView?.layoutMargins = UIEdgeInsets.zero
+        tableView.register(EventsTableViewCell.nib, forCellReuseIdentifier: EventsTableViewCell.identifier)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.showEventDetail(_:)), name: .detailSegue, object: nil)
     }
@@ -43,7 +43,7 @@ class EventsListViewController: UIViewController {
     func getEventsList(){
         Service.shared.getEventsList(completionHandler: { response,error  in
             if error != nil {
-                self.showAlertPopup(title: "Ops!" , message: "Ocorreu um erro ao tentar buscar os eventos. Gostaria de tentar novamente?", closeButtonCompletion: {
+                self.showAlertPopup(title: .ops , message: .eventsListServiceError, closeButtonCompletion: {
                     self.getEventsList()
                 })
             }
@@ -57,14 +57,12 @@ class EventsListViewController: UIViewController {
             }
         })
     }
-    //segue
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showDetailEventView") {
             let vc = segue.destination as! EventDetailViewController
-            vc.viewModel = EventDetailViewModel(event: (sender as? Event)!)
             vc.event = sender as? Event
         }
     }
-    
 }
 

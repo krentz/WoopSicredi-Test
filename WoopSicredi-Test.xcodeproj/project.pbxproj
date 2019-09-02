@@ -47,6 +47,10 @@
 		790456922319916100C80B08 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456912319916100C80B08 /* EventDetailViewController.swift */; };
 		790456982319A2B800C80B08 /* Double+PriceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456972319A2B800C80B08 /* Double+PriceMask.swift */; };
 		790A7B47231D482D00F8D67A /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B46231D482D00F8D67A /* EventListViewModel.swift */; };
+		790A7B4A231D554500F8D67A /* String+EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B49231D554500F8D67A /* String+EventDetail.swift */; };
+		790A7B4C231D5C3200F8D67A /* CLLocation+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B4B231D5C3200F8D67A /* CLLocation+Address.swift */; };
+		790A7B4E231D5D9200F8D67A /* String+Popups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B4D231D5D9200F8D67A /* String+Popups.swift */; };
+		790A7B50231D5DD500F8D67A /* String+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B4F231D5DD500F8D67A /* String+Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,10 @@
 		790456912319916100C80B08 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		790456972319A2B800C80B08 /* Double+PriceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+PriceMask.swift"; sourceTree = "<group>"; };
 		790A7B46231D482D00F8D67A /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		790A7B49231D554500F8D67A /* String+EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EventDetail.swift"; sourceTree = "<group>"; };
+		790A7B4B231D5C3200F8D67A /* CLLocation+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Address.swift"; sourceTree = "<group>"; };
+		790A7B4D231D5D9200F8D67A /* String+Popups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Popups.swift"; sourceTree = "<group>"; };
+		790A7B4F231D5DD500F8D67A /* String+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Errors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +340,9 @@
 				790456762318711500C80B08 /* UITableView+Animate.swift */,
 				790456822319548600C80B08 /* UIViewController+General.swift */,
 				79045689231973B400C80B08 /* UIImageView+LoadImage.swift */,
+				790A7B4B231D5C3200F8D67A /* CLLocation+Address.swift */,
+				790A7B4D231D5D9200F8D67A /* String+Popups.swift */,
+				790A7B4F231D5DD500F8D67A /* String+Errors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +362,7 @@
 				790456902319914000C80B08 /* Controllers */,
 				3CF95D1F231B213100DFE48D /* View Model */,
 				3CF95D1E231B211D00DFE48D /* Custom Cells */,
+				790A7B48231D552400F8D67A /* Extensions */,
 			);
 			path = "Event Detail";
 			sourceTree = "<group>";
@@ -369,6 +381,14 @@
 				790A7B46231D482D00F8D67A /* EventListViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		790A7B48231D552400F8D67A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				790A7B49231D554500F8D67A /* String+EventDetail.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,9 +525,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790A7B4C231D5C3200F8D67A /* CLLocation+Address.swift in Sources */,
+				790A7B4E231D5D9200F8D67A /* String+Popups.swift in Sources */,
 				790456732318679900C80B08 /* Person.swift in Sources */,
+				790A7B4A231D554500F8D67A /* String+EventDetail.swift in Sources */,
 				3CF95D34231B466100DFE48D /* CheckinTableViewCell.swift in Sources */,
 				790456712318619700C80B08 /* Event.swift in Sources */,
+				790A7B50231D5DD500F8D67A /* String+Errors.swift in Sources */,
 				3CF95D24231B21BC00DFE48D /* DescriptionTableViewCell.swift in Sources */,
 				790456832319548600C80B08 /* UIViewController+General.swift in Sources */,
 				3CD4E2BE2318AD0B00BB5BB2 /* Utils.swift in Sources */,

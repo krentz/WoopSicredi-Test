@@ -37,7 +37,7 @@ class PopupAlertViewController: UIViewController{
             closeButton.layer.borderWidth = 1
             closeButton.layer.borderColor = UIColor.gray.cgColor
             closeButton.layer.cornerRadius = 5
-            closeButton.setTitle("Tentar novaumente", for: .normal)
+            closeButton.setTitle(.tryAgain, for: .normal)
         }
     }
     
@@ -71,5 +71,4 @@ class PopupAlertViewController: UIViewController{
             self.removeFromParent()
         }
     }
-    
 }

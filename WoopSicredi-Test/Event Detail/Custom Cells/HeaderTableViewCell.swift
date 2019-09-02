@@ -21,17 +21,12 @@ class HeaderTableViewCell: UITableViewCell {
             headerTitle?.text = item.header
         }
     }
-    
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-    
     static var identifier: String {
         return String(describing: self)
     }
-
-
-
 }
 
 

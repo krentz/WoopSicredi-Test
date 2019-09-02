@@ -12,6 +12,7 @@ import CoreLocation
 class Utils {
     
     static let shared = Utils()
+    var address = ""
     
     func getFormattedDate(timeInterval: Int) -> String{
         let date = Date(timeIntervalSince1970: TimeInterval(timeInterval/1000))
@@ -24,7 +25,7 @@ class Utils {
     }
     
     func makeShareText(event: Event) -> String{
-        return "Evento: \(event.title)\n\nPreço: \(event.price.getPriceWithMask())\n\nData: \(self.getFormattedDate(timeInterval: event.date))\n\n\(event.description)"
+        return "Evento: \(event.title)\n\nEndereço: \(self.address)\n\nPreço: \(event.price.getPriceWithMask())\n\nData: \(self.getFormattedDate(timeInterval: event.date))\n\n\(event.description)"
     }
     
     func getAddressFromLatLon(latitude: Double, longitude: Double, completionHandler: @escaping (String,Error?) -> Void) {
@@ -38,7 +39,7 @@ class Utils {
             } else if let placemark = placemark?.first {
                 DispatchQueue.main.async {
                     let address = "\(String(describing: placemark.thoroughfare ?? "")) , \(String(describing: placemark.subThoroughfare ?? "")) - \(placemark.locality ?? "")"
-                    
+                    self.address = address
                     completionHandler(address,nil)
                 }
             }
@@ -46,8 +47,3 @@ class Utils {
     }
 }
 
-extension CLLocation {
-    func geocode(completion: @escaping (_ placemark: [CLPlacemark]?, _ error: Error?) -> Void)  {
-        CLGeocoder().reverseGeocodeLocation(self, completionHandler: completion)
-    }
-}

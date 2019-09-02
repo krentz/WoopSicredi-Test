@@ -21,11 +21,9 @@ class DateTableViewCell: UITableViewCell {
             dateLabel?.text = Utils.shared.getFormattedDate(timeInterval: item.date)
         }
     }
-    
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-    
     static var identifier: String {
         return String(describing: self)
     }

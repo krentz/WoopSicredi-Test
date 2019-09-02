@@ -20,14 +20,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-mT-LDn">
-                        <rect key="frame" x="63" y="4" width="195" height="35"/>
+                        <rect key="frame" x="62.5" y="4.5" width="195" height="35"/>
                         <color key="backgroundColor" red="0.56667309999465942" green="0.25722074508666992" blue="0.81752794981002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="195" id="3f6-LP-l5V"/>
                             <constraint firstAttribute="height" constant="35" id="Pz2-qG-yHA"/>
                         </constraints>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Checkin"/>
+                        <state key="normal" title="Check-in"/>
                         <connections>
                             <action selector="checkinAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hwf-qa-l1H"/>
                         </connections>

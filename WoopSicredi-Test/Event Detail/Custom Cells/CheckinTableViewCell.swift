@@ -22,14 +22,10 @@ class CheckinTableViewCell: UITableViewCell {
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-    
     static var identifier: String {
         return String(describing: self)
     }
-    
     @IBAction func checkinAction(_ sender: Any) {
          NotificationCenter.default.post(name: .checkin, object: nil,userInfo: nil)
     }
-    
-    
 }

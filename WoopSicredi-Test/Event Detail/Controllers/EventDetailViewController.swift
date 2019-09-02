@@ -18,16 +18,16 @@ class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.setNavigation()
+        self.viewModel = EventDetailViewModel(event: event)
         
         tableView?.dataSource = viewModel
-        
         tableView?.estimatedRowHeight = 100
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.preservesSuperviewLayoutMargins = false
         tableView?.separatorInset = UIEdgeInsets.zero
         tableView?.layoutMargins = UIEdgeInsets.zero
-        
         tableView?.register(DescriptionTableViewCell.nib, forCellReuseIdentifier: DescriptionTableViewCell.identifier)
         tableView?.register(PriceTableViewCell.nib, forCellReuseIdentifier: PriceTableViewCell.identifier)
         tableView?.register(DateTableViewCell.nib, forCellReuseIdentifier: DateTableViewCell.identifier)
@@ -46,32 +46,29 @@ class EventDetailViewController: UIViewController {
             if name != "", email != ""{
                 Service.shared.checkin(name: name, email: email, eventID: self.event.id, completionHandler: { success,error  in
                     if success == true {
-                        self.showSampleNativeAlert(title: "Parabéns!", message: "Checkin feito com sucesso!.")
+                        self.showSampleNativeAlert(title: .congrats, message: .checkinSuccess)
                     }
                     else{
-                        self.showSampleNativeAlert(title: "Ops", message: "Ocorreu um problema com o servidor, por favor tente novamente.")
+                        self.showSampleNativeAlert(title: .ops, message: .checkinServiceError)
                     }
                 })
             }
             else{
-                self.showSampleNativeAlert(title: "Ops", message: "Os dois campos devem ser preenchidos para que o checkin possa ser feito.")
+                self.showSampleNativeAlert(title: .ops, message: .checkinFieldsWarning)
             }
         })
     }
     
     @IBAction func shareEvent(_ sender: Any) {
-        
         let shareText = Utils.shared.makeShareText(event: self.event)
-        
-            let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
             present(vc, animated: true)
-      
     }
+    
     func setNavigation(){
-        self.navigationItem.title = "Evento"
+        self.navigationItem.title = .eventNavigationTitle
         if let topItem = self.navigationController?.navigationBar.topItem {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
     }
-
 }

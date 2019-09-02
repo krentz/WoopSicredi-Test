@@ -30,19 +30,19 @@ extension UIViewController {
     func showChekinPopup (actionCancelButtonCompletion: (() -> ())? = nil,
                           actionButtonCompletion: ((_ name: String, _ email: String) -> ())? = nil) {
         
-        let alertController = UIAlertController(title: "Por favor, informe os dados para o checkin:", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: .dataForCheckin, message: "", preferredStyle: .alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Nome"
+            textField.placeholder = .name
         }
-        let saveAction = UIAlertAction(title: "Checkin", style: .default, handler: { alert -> Void in
+        let saveAction = UIAlertAction(title: .checkin, style: .default, handler: { alert -> Void in
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
             actionButtonCompletion!(firstTextField.text ?? "", secondTextField.text ?? "")
         })
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .destructive, handler: {
+        let cancelAction = UIAlertAction(title: .cancel, style: .destructive, handler: {
             (action : UIAlertAction!) -> Void in })
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Email"
+            textField.placeholder = .email
         }
         
         alertController.addAction(cancelAction)

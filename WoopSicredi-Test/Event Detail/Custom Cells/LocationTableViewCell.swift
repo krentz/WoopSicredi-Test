@@ -11,8 +11,8 @@ import UIKit
 class LocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var addressLabel: UILabel!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+   
     var latitude = 0.0
     var longitude = 0.0
     
@@ -39,7 +39,6 @@ class LocationTableViewCell: UITableViewCell {
       
         }
     }
-    
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
@@ -47,6 +46,4 @@ class LocationTableViewCell: UITableViewCell {
     static var identifier: String {
         return String(describing: self)
     }
-
-    
 }
