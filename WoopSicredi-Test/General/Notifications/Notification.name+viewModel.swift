@@ -12,4 +12,5 @@ import Foundation
 
 extension Notification.Name {
     static let checkin = Notification.Name("checkin")
+    static let detailSegue = Notification.Name("detailSegue")
 }

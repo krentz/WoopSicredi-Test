@@ -15,6 +15,7 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventImage: UIImageView!{
         didSet{
             eventImage.layer.cornerRadius = 5
+            eventImage.clipsToBounds = true
         }
     }
     
@@ -31,11 +32,6 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        eventImage.layer.cornerRadius = 5
-        eventImage.clipsToBounds = true
-    }
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
     }

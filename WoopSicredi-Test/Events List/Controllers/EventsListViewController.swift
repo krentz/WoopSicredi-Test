@@ -14,6 +14,7 @@ class EventsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
     var eventList : [Event] = [Event]()
+    var viewModel = EventListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,24 @@ class EventsListViewController: UIViewController {
         self.tableView.register(EventsTableViewCell.nib, forCellReuseIdentifier: EventsTableViewCell.identifier)
        
         self.getEventsList()
+        
+        tableView?.delegate = viewModel
+        tableView?.estimatedRowHeight = 100
+        tableView?.rowHeight = UITableView.automaticDimension
+        tableView?.preservesSuperviewLayoutMargins = false
+        tableView?.separatorInset = UIEdgeInsets.zero
+        tableView?.layoutMargins = UIEdgeInsets.zero
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showEventDetail(_:)), name: .detailSegue, object: nil)
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .detailSegue, object: nil)
     }
     
+    
+    @objc func showEventDetail(_ notification: NSNotification){
+        self.performSegue(withIdentifier: "showDetailEventView", sender: notification.object)
+    }
     func getEventsList(){
         Service.shared.getEventsList(completionHandler: { response,error  in
             if error != nil {
@@ -31,7 +48,8 @@ class EventsListViewController: UIViewController {
                 })
             }
             else{
-                self.eventList = response!
+                self.viewModel.eventList = response!
+                self.tableView?.dataSource = self.viewModel
                 DispatchQueue.main.async {
                     self.tableView.showTableViewWithAnimation()
                     self.indicatorActivity.stopAnimating()
@@ -49,41 +67,4 @@ class EventsListViewController: UIViewController {
     }
     
 }
-
-
-//----------------------------- TABLE VIEW ------------------------------------------
-
-extension EventsListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showDetailEventView", sender: self.eventList[indexPath.row])
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
-}
-
-extension EventsListViewController: UITableViewDataSource{
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-         let cell = self.tableView.dequeueReusableCell(withIdentifier: EventsTableViewCell.identifier, for: indexPath) as! EventsTableViewCell
-        
-        cell.titleLabel.text = self.eventList[indexPath.row].title
-        cell.eventImage?.loadImage(url: self.eventList[indexPath.row].image)
-        cell.dateLabel?.text = Utils.shared.getFormattedDate(timeInterval: self.eventList[indexPath.row].date)
-        cell.priceLabel?.text = self.eventList[indexPath.row].price.getPriceWithMask()
-        
-        return cell
-    }
-   
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.eventList.count
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-}
-
-
 

@@ -12,6 +12,7 @@ class LocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var latitude = 0.0
     var longitude = 0.0
     
@@ -32,6 +33,8 @@ class LocationTableViewCell: UITableViewCell {
             
             Utils.shared.getAddressFromLatLon(latitude: self.latitude , longitude: self.longitude, completionHandler: { address, error in
                 self.addressLabel.text = address
+                self.addressLabel.alpha = 1
+                self.activityIndicator.isHidden = true
             } )
       
         }

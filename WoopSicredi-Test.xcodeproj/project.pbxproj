@@ -46,6 +46,7 @@
 		7904568E231988D300C80B08 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7904568B2319881B00C80B08 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		790456922319916100C80B08 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456912319916100C80B08 /* EventDetailViewController.swift */; };
 		790456982319A2B800C80B08 /* Double+PriceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456972319A2B800C80B08 /* Double+PriceMask.swift */; };
+		790A7B47231D482D00F8D67A /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B46231D482D00F8D67A /* EventListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		7904568B2319881B00C80B08 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
 		790456912319916100C80B08 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		790456972319A2B800C80B08 /* Double+PriceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+PriceMask.swift"; sourceTree = "<group>"; };
+		790A7B46231D482D00F8D67A /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				790456552318498900C80B08 /* Controllers */,
+				790A7B45231D481A00F8D67A /* View Model */,
 				790456842319651E00C80B08 /* Custom Cells */,
 				7904566F2318604200C80B08 /* Models */,
 				790456562318499100C80B08 /* Extensions */,
@@ -358,6 +361,14 @@
 				790456912319916100C80B08 /* EventDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		790A7B45231D481A00F8D67A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				790A7B46231D482D00F8D67A /* EventListViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,6 +526,7 @@
 				79045658231849A500C80B08 /* String+EventsList.swift in Sources */,
 				790456352318396B00C80B08 /* AppDelegate.swift in Sources */,
 				790456772318711500C80B08 /* UITableView+Animate.swift in Sources */,
+				790A7B47231D482D00F8D67A /* EventListViewModel.swift in Sources */,
 				790456922319916100C80B08 /* EventDetailViewController.swift in Sources */,
 				79045675231867DD00C80B08 /* Coupon.swift in Sources */,
 			);
