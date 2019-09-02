@@ -28,6 +28,9 @@
                         </constraints>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Checkin"/>
+                        <connections>
+                            <action selector="checkinAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hwf-qa-l1H"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

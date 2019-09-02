@@ -43,7 +43,8 @@ class EventsListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showDetailEventView") {
             let vc = segue.destination as! EventDetailViewController
-            vc.viewModel = sender as? EventDetailViewModel
+            vc.viewModel = EventDetailViewModel(event: (sender as? Event)!)
+            vc.event = sender as? Event
         }
     }
     
@@ -54,7 +55,7 @@ class EventsListViewController: UIViewController {
 
 extension EventsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showDetailEventView", sender: EventDetailViewModel(event: self.eventList[indexPath.row]))
+        self.performSegue(withIdentifier: "showDetailEventView", sender: self.eventList[indexPath.row])
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120

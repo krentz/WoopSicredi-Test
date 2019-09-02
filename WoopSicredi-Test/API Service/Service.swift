@@ -31,4 +31,20 @@ class Service {
             }
         }
     }
+    
+    func checkin(name: String, email: String, completionHandler: @escaping (Bool?,Error?) -> Void) {
+        
+        let params = ["name" : name,
+                      "email" : email]
+        
+        Alamofire.request("http://5b840ba5db24a100142dcd8c.mockapi.io/api/checkin", method: .post, parameters: params).responseJSON { response in
+            switch response.result {
+            case .success:
+                completionHandler(true, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
+    
 }

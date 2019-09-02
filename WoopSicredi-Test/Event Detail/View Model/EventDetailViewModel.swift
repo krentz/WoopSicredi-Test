@@ -25,13 +25,13 @@ protocol EventViewModelItem {
 
 class EventDetailViewModel: NSObject {
     var items = [EventViewModelItem]()
-    
+ 
     init(event: Event) {
         items.append(EventViewModelHeaderItem(header: event.title))
         items.append(EventViewModelDescriptionItem(description: event.description))
         items.append(EventViewModelPriceItem(price: event.price))
+        items.append(EventViewModelLocationItem(latitude: event.latitude, longitude: event.longitude))
         items.append(EventViewModelDateItem(date: event.date))
-        items.append(EventViewModelLocationItem(latitude: event.longitude, longitude: event.latitude))
         items.append(EventViewModelCheckinItem())
     }
 }
@@ -76,6 +76,7 @@ extension EventDetailViewModel: UITableViewDataSource {
             case .checkin:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: CheckinTableViewCell.identifier, for: indexPath) as? CheckinTableViewCell {
                     cell.item = item
+                   // cell.checkinDelegate = delegate
                     return cell
                 }
         }
@@ -158,7 +159,7 @@ class EventViewModelCheckinItem: EventViewModelItem {
     var rowCount: Int {
         return 1
     }
-    
+   
  }
 class EventViewModelHeaderItem: EventViewModelItem {
     

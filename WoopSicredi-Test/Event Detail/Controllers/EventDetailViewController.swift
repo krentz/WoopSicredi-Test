@@ -10,8 +10,9 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
 
-    var viewModel : EventDetailViewModel! // (event: self.event)
-
+    var viewModel : EventDetailViewModel!
+    var event : Event!
+    
     @IBOutlet weak var tableView: UITableView?
     
     override func viewDidLoad() {
@@ -34,8 +35,38 @@ class EventDetailViewController: UIViewController {
         tableView?.register(CheckinTableViewCell.nib, forCellReuseIdentifier: CheckinTableViewCell.identifier)
         tableView?.register(HeaderTableViewCell.nib, forCellReuseIdentifier: HeaderTableViewCell.identifier)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.checkinAction), name: .checkin, object: nil)
+    }
+   deinit {
+        NotificationCenter.default.removeObserver(self, name: .checkin, object: nil)
     }
     
+    @objc func checkinAction(){
+        self.showChekinPopup(actionButtonCompletion: { name, email in
+            if name != "", email != ""{
+                Service.shared.checkin(name: name, email: email, completionHandler: { success,error  in
+                    if success == true {
+                        self.showSampleNativeAlert(title: "Parabéns!", message: "Checkin feito com sucesso!.")
+                    }
+                    else{
+                        self.showSampleNativeAlert(title: "Ops", message: "Ocorreu um problema com o servidor, por favor tente novamente.")
+                    }
+                })
+            }
+            else{
+                self.showSampleNativeAlert(title: "Ops", message: "Os dois campos devem ser preenchidos para que o checkin possa ser feito.")
+            }
+        })
+    }
+    
+    @IBAction func shareEvent(_ sender: Any) {
+        
+        let shareText = Utils.shared.makeShareText(event: self.event)
+        
+            let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+            present(vc, animated: true)
+      
+    }
     func setNavigation(){
         self.navigationItem.title = "Evento"
         if let topItem = self.navigationController?.navigationBar.topItem {

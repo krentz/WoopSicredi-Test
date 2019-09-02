@@ -14,10 +14,9 @@ class CheckinTableViewCell: UITableViewCell {
         didSet{
             checkinButton.layer.cornerRadius = 15
             checkinButton.clipsToBounds = true
-            
         }
     }
-  
+    
     var item: EventViewModelItem?
     
     static var nib:UINib {
@@ -28,6 +27,9 @@ class CheckinTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
+    @IBAction func checkinAction(_ sender: Any) {
+         NotificationCenter.default.post(name: .checkin, object: nil,userInfo: nil)
+    }
     
     
 }

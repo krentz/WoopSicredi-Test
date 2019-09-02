@@ -10,11 +10,7 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var howToGetButton: UIButton!{
-        didSet{
-            howToGetButton.setTitleColor(UIColor.blue, for: .normal)
-        }
-    }
+    @IBOutlet weak var addressLabel: UILabel!
     
     var latitude = 0.0
     var longitude = 0.0
@@ -24,12 +20,21 @@ class LocationTableViewCell: UITableViewCell {
             guard let item = item as? EventViewModelLocationItem else {
                 return
             }
-            if let long = item.longitude as? Double {
-                self.longitude = long
+            
+            
+            if let latDouble = item.latitude as? Double, let lonDouble = item.longitude as? Double {
+                self.latitude = latDouble
+                self.longitude = lonDouble
             }
-            if let lat = item.latitude as? Double {
-                self.latitude = lat
+            else{
+                self.latitude = (item.latitude as! NSString).doubleValue
+                self.longitude = (item.longitude as! NSString).doubleValue
             }
+            
+            Utils.shared.getAddressFromLatLon(latitude: self.latitude , longitude: self.longitude, completionHandler: { address, error in
+                self.addressLabel.text = address
+            } )
+      
         }
     }
     

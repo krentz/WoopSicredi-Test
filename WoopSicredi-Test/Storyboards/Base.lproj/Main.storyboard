@@ -85,7 +85,11 @@
                         <viewLayoutGuide key="safeArea" id="7pj-Sm-41L"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="caa-yB-WhY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="E25-rK-Wwp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="E25-rK-Wwp">
+                            <connections>
+                                <action selector="shareEvent:" destination="iHv-kn-0ny" id="V0Z-n4-7DN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="DYK-2x-7xi" id="oqR-kJ-GVX"/>

@@ -21,6 +21,7 @@
 		3CF95D35231B466100DFE48D /* CheckinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D33231B466100DFE48D /* CheckinTableViewCell.xib */; };
 		3CF95D38231B48EC00DFE48D /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D36231B48EC00DFE48D /* HeaderTableViewCell.swift */; };
 		3CF95D39231B48EC00DFE48D /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95D37231B48EC00DFE48D /* HeaderTableViewCell.xib */; };
+		3CF95D3C231C551300DFE48D /* Notification.name+viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95D3B231C551300DFE48D /* Notification.name+viewModel.swift */; };
 		790456352318396B00C80B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456342318396B00C80B08 /* AppDelegate.swift */; };
 		790456372318396B00C80B08 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790456362318396B00C80B08 /* EventsListViewController.swift */; };
 		7904563A2318396B00C80B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790456382318396B00C80B08 /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		3CF95D33231B466100DFE48D /* CheckinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinTableViewCell.xib; sourceTree = "<group>"; };
 		3CF95D36231B48EC00DFE48D /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3CF95D37231B48EC00DFE48D /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		3CF95D3B231C551300DFE48D /* Notification.name+viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.name+viewModel.swift"; sourceTree = "<group>"; };
 		790456312318396B00C80B08 /* WoopSicredi-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoopSicredi-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790456342318396B00C80B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790456362318396B00C80B08 /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		3CD4E2BF2318BA3300BB5BB2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				3CF95D3A231C54DA00DFE48D /* Notifications */,
 				790456812319546100C80B08 /* Extensions */,
 				7904567E231951AB00C80B08 /* Popups */,
 				3CD4E2C02318BA3C00BB5BB2 /* Utils */,
@@ -178,6 +181,14 @@
 				3CF95D20231B216800DFE48D /* EventDetailViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		3CF95D3A231C54DA00DFE48D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3CF95D3B231C551300DFE48D /* Notification.name+viewModel.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		790456282318396B00C80B08 = {
@@ -493,6 +504,7 @@
 				3CF95D30231B40EB00DFE48D /* LocationTableViewCell.swift in Sources */,
 				790456982319A2B800C80B08 /* Double+PriceMask.swift in Sources */,
 				3CF95D21231B216800DFE48D /* EventDetailViewModel.swift in Sources */,
+				3CF95D3C231C551300DFE48D /* Notification.name+viewModel.swift in Sources */,
 				3CF95D2C231B3E6E00DFE48D /* DateTableViewCell.swift in Sources */,
 				790456872319656B00C80B08 /* EventsTableViewCell.swift in Sources */,
 				790456372318396B00C80B08 /* EventsListViewController.swift in Sources */,
